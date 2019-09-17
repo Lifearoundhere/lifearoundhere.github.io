@@ -1,5 +1,5 @@
 h1 a {
-  color: rgb(42, 43, 54);
+  color: #443525;
 }
 .typewriteContainer {
   text-align: center;
@@ -11,4 +11,23 @@ h1 {
 }
 .parallax-container .parallax img {
   z-index: -1;
+}
+.tooltipped {
+  margin: 10px;
+  background-color: #c12534;
+}
+
+.page-footer {
+  background-color: #4c6453;
+}
+.sidenav-trigger {
+  z-index: 3;
+}
+.card {
+  border-radius: 5px;
+  background-color: #c12534;
+}
+.card-content {
+  height: 200px;
+  overflow: hidden;
 }
