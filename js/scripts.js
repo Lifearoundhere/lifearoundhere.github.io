@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.onload = function () {
     const elements = document.getElementsByClassName('typewrite')
-    for (const i = 0; i < elements.length; i++) {
+    for (let i = 0; i < elements.length; i++) {
       const toRotate = elements[i].getAttribute('data-type')
       const period = elements[i].getAttribute('data-period')
       if (toRotate) {
