@@ -1,0 +1,14 @@
+h1 a {
+  color: rgb(42, 43, 54);
+}
+.typewriteContainer {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+}
+h1 {
+  z-index: 2;
+}
+.parallax-container .parallax img {
+  z-index: -1;
+}
