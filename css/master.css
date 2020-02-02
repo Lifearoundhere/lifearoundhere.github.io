@@ -16,7 +16,6 @@ h1 {
   margin: 10px;
   background-color: #c12534;
 }
-
 .page-footer {
   background-color: #4c6453;
 }
@@ -30,4 +29,13 @@ h1 {
 .card-content {
   height: 200px;
   overflow: hidden;
+}
+li {
+  padding: 5px;
+}
+img {
+  max-width: 100%;
+}
+.paddingRight {
+  padding-right: 10px;
 }
