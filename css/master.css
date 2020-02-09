@@ -39,3 +39,17 @@ img {
 .paddingRight {
   padding-right: 10px;
 }
+.footer-copyright > div > a {
+  color: #97e999;
+}
+@media (min-width: 300px) and (max-width: 600px) {
+  .btn-floating.btn-large {
+    height: 80px;
+    width: 80px;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+  }
+}
