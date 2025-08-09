@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pete Singh - CRM Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="text-2xl font-bold text-indigo-600">Pete Singh</div>
+            <div class="md:hidden">
+                <button id="hamburger-btn" class="text-gray-500 hover:text-indigo-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-2 md:space-y-0 md:space-x-8 mt-4 md:mt-0">
+                <a href="startup.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Startup</a>
+                <a href="crm.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">CRM Example</a>
+                <a href="shoppingtrends.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Shopping Trends</a>
+                <a href="about.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <section class="text-center mx-auto max-w-4xl">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Executive Revenue Performance Dashboard</h1>
+            <p class="text-lg text-gray-600 mb-8">This interactive dashboard delivers a comprehensive view of sales performance, revenue trends, and market opportunities across products, sectors, and accounts. Designed for executives and sales leaders, this dashboard delivers actionable insights to improve conversion rates, grow recurring revenue, optimize product mix, and recover lost opportunities. It enables quick navigation from high-level KPIs to detailed account, agent, or product analysis — all in one place.</p>
+            <div class="text-sm text-gray-500 mb-8">
+                Data Source: <a href="#" class="text-indigo-600 hover:underline">CRM🚀 + Sales📊 + Opportunities🔖</a>
+            </div>
+        </section>
+
+        <!-- Power BI Embed -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">CRM Dashboard</h2>
+            <div class="aspect-video w-full rounded-lg overflow-hidden shadow-xl border border-gray-200">
+                <iframe title="CRM Example" width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiODhjZDZmNDktN2JkOS00NTgwLWIwNDMtZTZkZWIzM2ViZGU3IiwidCI6IjE3MTExMmU4LWU3ZDEtNDVlMS1iODQ4LWIyNWQ2MzY4ZjFhOCJ9&pageName=e5518ded2717b9d196ee" frameborder="0" allowFullScreen="true" class="w-full h-full">
+                    <p class="text-red-500 p-4">Your browser does not support iframes. Please visit the Power BI report directly.</p>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- DAX Code Documentation -->
+        <section id="dax-measures" class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-semibold text-gray-900 mb-6 text-center">DAX Measure Documentation</h2>
+            <!-- Accordion for each DAX Measure -->
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-header w-full flex items-center justify-between p-4 bg-gray-100 font-medium text-lg text-left text-gray-700 hover:bg-gray-200 transition-colors">
+                        Total Revenue
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-white">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto mb-4"><code>SUM(sales_pipeline[close_value])</code></pre>
+                        <p class="text-gray-700">This measure calculates the total revenue by summing the `close_value` column in the `sales_pipeline` table, representing the total value of all closed deals.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-header w-full flex items-center justify-between p-4 bg-gray-100 font-medium text-lg text-left text-gray-700 hover:bg-gray-200 transition-colors">
+                        Average Deal Size
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-white">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto mb-4"><code>AVERAGE(sales_pipeline[close_value])</code></pre>
+                        <p class="text-gray-700">This measure calculates the average value of deals by averaging the `close_value` column, providing a quick insight into the typical size of a transaction.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-header w-full flex items-center justify-between p-4 bg-gray-100 font-medium text-lg text-left text-gray-700 hover:bg-gray-200 transition-colors">
+                        Win Rate %
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-white">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto mb-4"><code>DIVIDE([Deals Won], [Total Deals])</code></pre>
+                        <p class="text-gray-700">This measure calculates the win rate by dividing the number of deals won by the total number of deals. It's a key performance indicator for sales effectiveness.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-header w-full flex items-center justify-between p-4 bg-gray-100 font-medium text-lg text-left text-gray-700 hover:bg-gray-200 transition-colors">
+                        Deals Won
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-white">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto mb-4"><code>COUNTROWS(FILTER(sales_pipeline, sales_pipeline[deal_stage] = "Won"))</code></pre>
+                        <p class="text-gray-700">This measure counts the number of rows in the `sales_pipeline` table where the `deal_stage` is equal to "Won", giving the total count of successful deals.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-header w-full flex items-center justify-between p-4 bg-gray-100 font-medium text-lg text-left text-gray-700 hover:bg-gray-200 transition-colors">
+                        Total Deals
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-white">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto mb-4"><code>COUNTROWS(FILTER(sales_pipeline, sales_pipeline[deal_stage] = "Won" || sales_pipeline[deal_stage] = "Lost"))</code></pre>
+                        <p class="text-gray-700">This measure counts all deals that have either been won or lost, providing a count of all concluded deals in the pipeline.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="accordion-header w-full flex items-center justify-between p-4 bg-gray-100 font-medium text-lg text-left text-gray-700 hover:bg-gray-200 transition-colors">
+                        Agent Win Rate
+                        <i class="fas fa-chevron-down transform transition-transform"></i>
+                    </button>
+                    <div class="accordion-content hidden p-4 bg-white">
+                        <pre class="bg-gray-800 text-gray-100 p-4 rounded-md overflow-x-auto mb-4"><code>CALCULATE([Win Rate %], ALLEXCEPT(sales_pipeline, sales_pipeline[sales_agent]))</code></pre>
+                        <p class="text-gray-700">This measure calculates the win rate specifically for the sales agent being evaluated. The `ALLEXCEPT` function ensures that the calculation is only filtered by the current agent, ignoring other filters on the page.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white shadow-inner mt-12 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            &copy; 2025 P Singh. All rights reserved. | Contact: <a href="mailto:contact@psingh.co.uk" class="text-indigo-600 hover:underline">contact@psingh.co.uk</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
